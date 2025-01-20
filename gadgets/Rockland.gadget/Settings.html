@@ -1,0 +1,53 @@
+<html>
+<head>
+	<style>
+		body{ 
+			width:210;
+			height:125;
+		}
+	</style>
+	<script>
+	function init() {
+		var currentSetting = System.Gadget.Settings.read("stationPicker");
+		if (currentSetting != "")
+			stationPicker.value = currentSetting;
+	}
+
+	System.Gadget.onSettingsClosing = SettingsClosing;
+	function SettingsClosing(event)
+	{
+ 		if (event.closeAction == event.Action.commit) {
+			variableName = stationPicker.value;
+			System.Gadget.Settings.write("stationPicker", variableName);
+		}
+		
+		event.cancel = false;
+	}
+	</script>
+</head>
+<body onload="init()">
+	<span id="mySpan" style="font-family: Tahoma; font-size: 10pt;">
+		Senderliste:<br>
+	  <select NAME="station" id="stationPicker" style="width: 200;">
+         <option VALUE="https://streams.rockland.de/dab/mp3-192/streams.rockland.de/onlineradiobox/"> Rockland DAB Landesweit
+         <option VALUE="https://bestofrockfm.stream.vip/classic/mp3-256/direkt/">Rockland Classic Rock
+         <option VALUE="https://bestofrockfm.stream.vip/softrock/mp3-256/direkt/">Rockland Soft Rock
+         <option VALUE="https://bestofrockfm.stream.vip/hardrock/mp3-256/direkt/">Rockland Hard Rock
+         <option VALUE="https://bestofrockfm.stream.vip/80rock/mp3-256/direkt/">Rockland 80er Rock
+         <option VALUE="https://bestofrockfm.stream.vip/90rock/mp3-256/direkt/">Rockland 90er Rock
+         <option VALUE="https://bestofrockfm.stream.vip/party/mp3-256/direkt/">Rockland Party Rock
+         <option VALUE="https://bestofrockfm.stream.vip/altrock/mp3-256/direkt/">Rockland Alternative Rock
+         <option VALUE="https://bestofrockfm.stream.vip/deutsch/mp3-256/direkt/">Rockland Deutsch Rock
+         <option VALUE="https://bestofrockfm.stream.vip/metal/mp3-256/direkt/">Rockland Metal
+         <option VALUE="https://bestofrockfm.stream.vip/metallica/mp3-256/direkt/">Rockland Metallica
+         <option VALUE="https://bestofrockfm.stream.vip/acdc/mp3-256/direkt/">Rockland AC DC
+         <option VALUE="https://bestofrockfm.stream.vip/rammstein/mp3-256/direkt/">Rockland Rammstein
+         <option VALUE="https://bestofrockfm.stream.vip/xmasrock/mp3-256/direkt/">Rockland XMas Rock
+         <option VALUE="https://liveradio.swr.de/sw331ch/swr3/">SWR3
+         <option VALUE="https://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3">WDR4
+         <option VALUE="https://dispatcher.rndfnk.com/hr/hr3/live/mp3/high">HR3
+    </select>
+		<p>Use mouse wheel for volume. Click on the song title for picture.</p>
+	</span>
+</body>
+</html>

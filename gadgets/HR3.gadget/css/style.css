@@ -1,0 +1,44 @@
+/* CSS Document */
+
+body
+{
+  font-family: Segoe UI, Tahoma, Sans-Serif;
+  width:130px;
+  height:73px;
+  margin:0px;
+  padding:0px;
+  color:#FFFFFF;
+  background:no-repeat url(..\images\docked.png);
+}
+
+#playStateImage
+{
+  top:0px;
+  left:15px;
+}
+#song_title
+{
+  margin-top: 6px;
+  margin-left: 6px;
+  color:#FFFFFF;
+  font-size: 10px;
+  float: left;
+  width: 115px;
+  font-weight: bold;
+}
+#song_info
+{
+  margin-top: 0px;
+  margin-left: 6px;
+  color:#FFFFFF;
+  font-size: 10px;
+  float: left;
+  width: 115px;
+  font-weight: bold;
+}
+#playbackControls
+{
+  position: absolute;
+  right: 4px;
+  bottom: 9px;
+}

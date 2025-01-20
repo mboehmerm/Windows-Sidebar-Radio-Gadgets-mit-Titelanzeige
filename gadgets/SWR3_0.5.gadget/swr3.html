@@ -1,0 +1,40 @@
+<html xmlns>
+<head>
+	<title>SWR3 Gadget 0.4</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="js/radio.js" type="text/javascript"></script>
+	<script language="javascript" src="js/img_rollover.js" type="text/javascript"></script>
+	<script for="mediaPlayer" event="playstatechange(newstate)">playStateChange(newstate);</script>
+</head>
+
+
+    <div id="gadgetText">
+
+      <div id="song_title" style="height=13px;overflow:hidden;">
+        <div id="animCont" style="left:0;margin-left:2px;position:absolute;" nowrap>
+          .
+        </div>        
+      </div>
+      <div id="playbackControls" style="cursor:pointer;">
+        <g:image id="controlImage" onclick="controlImageClick();" src="images/play.png" />
+      </div>
+      <div id="song_info" style="height=13px;overflow:hidden;">
+        <div id="animCont2" style="left:0;margin-left:2px;position:absolute;" nowrap>
+          StopFM
+      </div>
+      </div><br>
+    
+    </div>
+	</div>
+
+<OBJECT id="mediaPlayer" width="0" height="0" 
+	style="position:absolute; left:0;top:0;"
+	CLASSID="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6"
+	type="application/x-oleobject">	
+	<PARAM NAME="SendPlayStateChangeEvents" VALUE="True">
+	<PARAM NAME="AutoStart" VALUE="False">
+	<PARAM name="uiMode" value="invisible">
+</OBJECT>
+</body>
+
+</html>

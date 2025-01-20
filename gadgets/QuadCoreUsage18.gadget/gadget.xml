@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gadget>
+  <name>.:Quad / Dual Core Usage:.</name>
+  <namespace>quadcoreusage</namespace>
+  <version>1.8</version>
+  <author name="Orbmu2k">
+    <info url="http://blog.orbmu2k.de" text="Orbmu2k Blog" />
+    <logo src="chip48.png" />
+  </author>
+  <copyright>© 2008 by Orbmu2k</copyright>
+  <description>Shows total and per core cpu usage. It also displayes a per core usage history. For reading temperatures it supports Speedfan, Coretemp, Everest and HWMonTray</description>
+  <icons>
+    <icon height="48" width="48" src="qcu_scr.png" />
+  </icons>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0.0" src="98c60595-9061-4fc1-94fa-c3e277f6ffa5" />
+      <permissions>Full</permissions>
+      <platform minPlatformVersion="1.0" />
+      <defaultImage src="qcu_scr.png" />
+    </host>
+  </hosts>
+</gadget>

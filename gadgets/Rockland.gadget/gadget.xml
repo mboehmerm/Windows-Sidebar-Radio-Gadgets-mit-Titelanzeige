@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gadget>
+  <name>Rockland Radio</name>
+  <namespace>Rockland Radio</namespace>
+  <version>0.7</version>
+  <author name="mb">
+    <info url="onlineradiobox.com" text="Online Radio Box" />
+    <logo src="logo.png" />
+  </author>
+  <copyright>no copyright</copyright>
+  <description>Rockland Webradio Sidebar Player</description>
+  <icons>
+    <icon height="82" width="82" src="icon.png" />
+  </icons>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0" src="Rockland.html" />
+      <permissions>full</permissions>
+      <platform minPlatformVersion="1.0"/>
+      <defaultImage src="drag.png" />
+    </host>
+  </hosts>
+</gadget>

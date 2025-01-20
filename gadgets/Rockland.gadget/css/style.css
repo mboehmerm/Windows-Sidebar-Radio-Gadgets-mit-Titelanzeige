@@ -1,0 +1,70 @@
+/* CSS Document */
+
+body
+{
+	font-family: Segoe UI, Tahoma, Sans-Serif;
+	width:130px;
+	height:73px;
+	margin:0px;
+	padding:0px;
+	color: #FFFFFF;
+	background:no-repeat url(..\images\docked.png);
+}
+
+#help
+{
+	z-index: 4;
+	position: absolute;
+	left: 116px;
+	top: 5px;	
+	width: 10px;
+	height: 10px;		
+}
+
+#homepage
+{
+	z-index: 4;
+	position: absolute;
+	left: 116px;
+	top: 17px;	
+	width: 10px;
+	height: 10px;		
+}
+
+#playStateImage
+{
+	top:0px;
+	left:15px;
+}
+#song_title
+{
+	margin-top: 40px;
+	margin-left: 8px;
+	color:#FFFFFF;
+	font-size: 10px;
+	float: left;
+	width: 115px;
+	font-weight: bold;
+}
+#song_info
+{
+	margin-top: 0px;
+	margin-left: 8px;
+	color:#FFFFFF;
+	font-size: 10px;
+	float: left;
+	width: 115px;
+	font-weight: bold;
+}
+#song_title a {
+   color: #fff !important;
+  text-decoration: none;
+}
+
+#playbackControls
+{
+	position: absolute;
+	right: 14px;
+	top: 5px;
+	
+}

@@ -1,0 +1,133 @@
+----------------------------------------------------------------------------------------------------
+
+Dieses Gadget ist ursprünglich enstanden aus dem SWR3 Gadget.
+  <author name="Caschy"> <info url="www.stadt-bremerhaven.de" text="Caschys Blog" />
+Allerdings funktionieren AudioURL, Titel und Interpret schon lange nicht mehr.
+
+Bitte daran denken, dass das Programm quasi eine Alpha-Version ist, 
+also alles andere als perfekt ist.
+
+Die Radio Gadgets verwenden Daten von onlineradiobox.com
+
+DesktopGadgetsRevived-2.0.exe muß installiert sein.
+
+----------------------------------------------------------------------------------------------------
+
+Bedienung :
+
+ - Rollen der Maus verändert die Laustärke.
+ - Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden.
+   Hier gibt es Links auf Video, Playlist und Homepage.
+ - Der "Vergrößern" Button öffnet ein doppelt so großes Fenster. 
+   Praktisch bei hoch auflösenden Monitoren.
+
+----------------------------------------------------------------------------------------------------
+
+Probleme mit "Windows Minianwendungen" bei Skalierung des Displays auf Werte über 100%.
+
+Das Clock-Gadget verschwindet und erscheint erst wieder, wenn man die Skalierung auf 100% setzt.
+In der Gadget.xml die folgende Zeile löschen.
+  <autoscaleDPI><!--_locComment_text="{Locked}"-->true</autoscaleDPI>
+
+Interessanter Effekt beim Skalieren der auf über 100% :
+Hat man vorher 100% und erhöht dann auf höhere Werte, dann vergrößert Windows die Gadgets richtig.
+Nachdem Neustart von Windows klappt das allerdings nicht mehr. Lösung :
+In Windows den Hauptbildschirm auf einen Monitor legen, bei dem die Skalierung 100% ist.
+Bei dem erweiterten Bildschirm die Skalierung auf Werte größer 100% setzen. Dann klappt die Skalierung.
+
+----------------------------------------------------------------------------------------------------
+
+Das Gadget läßt sich relativ leicht auf andere Sender umstellen : 
+
+----------------------------------------------------------------------------------------------------
+
+Probleme mit Windows Minianwendungen ( sidebar.exe ) beim Ändern von Dateien eines Gadgets :
+
+Die meisten Aktionen beim Bearbeiten der Dateien müssen als Admministrator ausgeführt werden.
+Verwendet hab ich den TotalCommander und npp als Administrator. Das ging soweit problemlos.
+
+Ändert man z.B. die js\radio.js und speichert sie ab, dann muß man das Gadget erst schließen,
+wenn es noch geöffnet ist. Nach dem erneuten Öffnen des Gadgets mit "Windows Minianwendungen"
+wird dann die veränderte radio.js ausgeführt.
+
+Das klappt allerdings nicht bei einigen Bildern wie "drag.png" oder "logo.png".
+Hier muß man "Windows Minianwendungen" mit dem "Task-Manager" beenden und danach neu starten.
+Danach sieht man dann die veränderten Bilder.
+
+----------------------------------------------------------------------------------------------------
+
+Senderinformationen auf onlineradiobox suchen
+
+  Bei onlineradiobox.com nach dem Sender suchen. Dann bekommt man z.B. :
+    https://onlineradiobox.com/de/hr3radio/?cs=de.hr3radio
+
+  Im Firefox linke Maustaste auf dem Play-Icon und "Untersuchen" wählen.
+  Linke Maustaste auf dem markierten Text und "HTML bearbeiten" wählen.
+  Hier brauchen wir diese beiden Informationen :
+    stream="https://dispatcher.rndfnk.com/hr/hr3/live/mp3/high?aggregator=onlineradiobox-com"
+    radioid="de.hr3radio" 
+  Die Stream Addresse von HR3 ist :
+    "https://dispatcher.rndfnk.com/hr/hr3/live/mp3/high"
+  Informationen über Titel etc. finden sich hier :
+    "scraper.onlineradiobox.com/de.hr3radio" 
+  Diese beiden Adressen kann man übrigens direkt im Browser einfügen bzw. testen.
+
+----------------------------------------------------------------------------------------------------
+
+Will man den Sender im "wdr4" Gadget auf "hr3" ändern, dann sollte das so gehen :
+
+  In der Datei js/radio.js die Zeilen
+    var radioText   = "WDR4";
+    var radioUrl    = "https://www1.wdr.de/radio/wdr4/index.html";                             // Homepage
+    var streamUrl   = "http://wdr-wdr4-live.icecast.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3";  // Stream Adresse
+    var scraperUrl1 = "https://scraper.onlineradiobox.com/";                                   // Scraper Basis Adresse
+    var scraperUrl2 = "de.wdr4";                                                               // Scraper Adresse
+    var cover       = "images/wdr4.png";          // Wird im Flyout angezeigt, wenn kein Cover verfügbar ist
+  ändern in 
+    var radioText   = "HR3";
+    var radioUrl    = "https://www1.hr3.de/";                                                  // Homepage
+    streamUrl       = "https://dispatcher.rndfnk.com/hr/hr3/live/mp3/high";                    // Stream Adresse
+    var scraperUrl1 = "https://scraper.onlineradiobox.com/";                                   // Scraper Basis Adresse
+    var scraperUrl2 = "de.hr3radio";                                                           // Scraper Adresse
+    var cover       = "images/hr3.png";           // Wird im Flyout angezeigt, wenn kein Cover verfügbar ist
+
+  Das reicht eigentlich schon für einen anderen Sender.
+
+  Falls Titel und interpret nicht richtig angezeigt werden, dann kann man das so anpassen :
+  Titel und Interpret sind bei SWR3 in "title" durch " / " getrennt, also z.B. "Songtitel / Interpret".
+  Bei Rockland  und WDR4 ist es " - ". Bei HR3 widerum ist es " von ".
+  Das Gadget widerum erwartet das Zeichen "|", um Titel und Interpret zu trennen.
+
+  Ändert man das nicht, werden die Titel halt in einer Zeile angezeigt.
+
+  Wenn man das ergänzen/änddern will, dann ergänzt oder erstzt man   ebenfalls in js/radio.js die Zeilen 
+      output = output.replace(" / "  , " | ");  // SWR3 
+      output = output.replace(" - "  , " | ");  // Rockland, WDR4
+      output = output.replace(" von ", " | ");  // HR3
+  
+  Die Bilder kann man dann auch noch ändern, also die Dateien 
+    drag.png
+    logo.png 
+    icon.png
+    images\Docked.png
+    images\Undocked.png
+    images\swr3.de
+    
+  Außerdem kann man diese Datei anpassen
+    gadget.xml
+    
+  Die folgende Zeile kann man auch noch ändern :
+    backgroundColor = "#00335E";  // WDR4
+  in  
+    backgroundColor = "#C20014";  // HR3
+    
+  Das ist die Hintergrundfarbe von Docked.png und Undocked.png.
+  Kriegt man z.B. mit paint.net heraus, das ich zum Bearbeiten der Bilder verwendet habe.
+  Mit Farbauswahl/Pipette auf ein Hintergrundpixel klicken und in der Palette auf "Mehr >>" klicken.
+  Hier bekommt den Hexcode "C20014" angezeigt, den man mit Raute ! als "#C20014" braucht.
+  
+  Das beruht auf einem Problem, das nur bei Dock/Undock/vergrößerten Fenstern auftritt.
+  Einfach mal auf das Gadget doppelklicken, dann sieht man, was gemeint ist.
+  
+----------------------------------------------------------------------------------------------------
+
