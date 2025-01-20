@@ -16,6 +16,10 @@ C:\Program Files\Windows Sidebar\Gadgets
 
 Weitere informationen finden sich in der Datei [LiesMich.txt](gadgets/WDR4.gadget/LiesMich.txt) im jeweiligen Gadget Verzeichnis.
 
+Bedienung :
+- Rollen der Maus verändert die Laustärke.
+- Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden. Hier gibt es Links auf Video, Playlist und Homepage.
+ - Der "Vergrößern" Button öffnet ein doppelt so großes Fenster. Praktisch bei hoch auflösenden Monitoren oder Sehschwäche.
 
 ![Touch_Display_1 8_SD](pictures/Screenshot_01.jpg)
 
