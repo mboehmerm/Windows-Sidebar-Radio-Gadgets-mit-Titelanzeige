@@ -17,6 +17,6 @@ C:\Program Files\Windows Sidebar\Gadgets
 Weitere informationen finden sich in der Datei [LiesMich.txt](gadgets/WDR4.gadget/LiesMich.txt) im jeweiligen Gadget Verzeichnis.
 
 
-![Touch_Display_1 8_SD](pictures/Screenshot_02.jpg)
-
 ![Touch_Display_1 8_SD](pictures/Screenshot_01.jpg)
+
+![Touch_Display_1 8_SD](pictures/Screenshot_02.jpg)
