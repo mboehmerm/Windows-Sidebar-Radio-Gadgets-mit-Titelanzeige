@@ -1,0 +1,37 @@
+<html>
+<script>
+  function Initialize() {
+    document.getElementById('Image1').src      = System.Gadget.Settings.read('coverAddress');
+    document.getElementById('playlist').href   = System.Gadget.Settings.read('playlistUrl');
+    document.getElementById('track').href      = System.Gadget.Settings.read('trackUrl');
+    document.getElementById('track').innerHTML = System.Gadget.Settings.read('trackText');
+    document.getElementById('radio').href      = System.Gadget.Settings.read('radioUrl');
+    document.getElementById('radio').innerHTML = System.Gadget.Settings.read('radioText');
+  }
+</script>
+<head>
+  <title>SWR3 Flyout</title>
+  <style>
+    body
+    {
+      font-family: Segoe UI, Tahoma, Sans-Serif;
+      width:360px;
+      height:360px;
+      margin:0px;
+      padding:0px;
+    }
+  </style>
+</head>
+<body onload="Initialize();" onclick="System.Gadget.Flyout.show = false;" >
+  <center>  
+  <img id="Image1" 
+       src="images/swr3.jpg" 
+       onclick="System.Gadget.Flyout.show = false;" 
+       style="padding: 0px;" alt="" width="360" height="360"  />
+  </center>
+  <a id="track"    href="https://onlineradiobox.com" >Video</a>
+  <a id="playlist" href="https://onlineradiobox.com" >Playlist</a>
+  <a id="radio"    href="https://onlineradiobox.com" >Homepage</a>
+  <a id="status"   href="http://hotspot.free-key-de.eu/status" >FreeKey Status</a>
+</body>
+</html>

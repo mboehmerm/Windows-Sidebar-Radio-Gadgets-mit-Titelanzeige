@@ -1,0 +1,53 @@
+/* CSS Document */
+
+body
+{
+  font-family: Segoe UI, Tahoma, Sans-Serif;
+  width:130px;
+  height:73px;
+  margin:0px;
+  padding:0px;
+  color:#FFFFFF;
+  background:no-repeat url(..\images\docked.png);
+}
+#song_title
+{
+  margin-top: 6px;
+  margin-left: 63px;
+  color:#9F203F;
+  font-size: 13px;
+  float: left;
+  width: 63px;
+  height: 18px;
+  font-weight: bold;
+}
+#song_info
+{
+  margin-top: 2px;
+  margin-left: 63px;
+  color:#000000;
+  font-size: 10px;
+  float: left;
+  width: 63px;
+  height: 12px;
+}
+#line3
+{
+  margin-top: 2px;
+  margin-left: 63px;
+  color:#000000;
+  font-size: 10px;
+  float: left;
+  width: 63px;
+  height: 12px;
+}
+#line4
+{
+  margin-top: 2px;
+  margin-left: 63px;
+  color:#000000;
+  font-size: 10px;
+  float: left;
+  width: 63px;
+  height: 12px;
+}

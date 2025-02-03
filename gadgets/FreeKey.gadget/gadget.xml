@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<gadget>
+  <name>FREE-KEY-DE</name>
+  <namespace>FREE-KEY Gadget</namespace>
+  <version>0.2</version>
+  <author name="mb">
+    <info url="www.free-key-de.eu/" text="FREE-KEY" />
+    <logo src="logo.png" />
+  </author>
+  <copyright>no copyright</copyright>
+  <description>FREE-KEY Gadget</description>
+  <icons>
+    <icon height="82" width="82" src="icon.png" />
+  </icons>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0" src="free-key.html" />
+      <permissions>full</permissions>
+      <platform minPlatformVersion="1.0"/>
+      <defaultImage src="drag.png" />
+    </host>
+  </hosts>
+</gadget>
