@@ -19,6 +19,7 @@ C:\Program Files\Windows Sidebar\Gadgets
 Weitere informationen finden sich in der Datei [LiesMich.txt](gadgets/WDR4.gadget/LiesMich.txt) im jeweiligen Gadget Verzeichnis.
 
 Bedienung :
+- Klicken auf das Play-Icon startet oder stoppt den Audio-Stream.
 - Rollen der Maus auf dem Gadget verändert die Laustärke.
 - Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden. Hier gibt es Links auf Video, Playlist und Homepage des Radiosenders.
 - Der Button "Vergrößern" öffnet ein doppelt so großes Fenster. Praktisch bei hoch auflösenden Monitoren.
@@ -27,3 +28,44 @@ Bedienung :
 ![Screenshot_01.jpg](pictures/Screenshot_01.jpg)
 
 ![Screenshot_02.jpgD](pictures/Screenshot_02.jpg)
+
+## Zwei Gadgets für free-key-de
+
+Die beiden Gadgets zeigen die Restzeit an, nach der man sich wieder neu anmelden muß. Doppelklicken auf die Restzeit loggt einen aus und gleich wieder ein, so daß man wieder die volle Restzeit hat.
+
+Um den Anmeldeprozeß nachzuvollziehen wurde [LynxPortable_2.9.2.paf.exe](programs/LynxPortable_2.9.2.paf.exe) installiert. Schaltet man beim Einloggen mit Lynx über "http://hotspot.free-key-de.eu/status" mit "Ctrl + T" die Option Trace ein, dann wird der Anmeldeprozeß hier gespeichert : 
+
+```java
+C:\<Installationspfad>\LynxPortable\Data\LynxSettings\LY-TRACE.LOG
+```
+
+Hier sieht man, welche Queries mit welchen Daten gesendet bzw empfangen wurden.
+
+Zum Debuggen wurde [Dbgview.exe](programs/Dbgview.exe) verwendet, mit dem man sich z.B. die Rückgabedaten eines XMLHttpRequest anschauen kann.
+
+```java
+System.Debug.outputString("State : " + req.readyState + " / Status : " + req.status);
+System.Debug.outputString("ResponseText : " + req.responseText);
+```
+
+### FreeKey.gadget
+
+Bedienung :
+- Anklicken von Restzeit aktualisiert die Daten.
+- Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
+- Der Button "Vergrößern" öffnet ein doppelt so großes Fenster.
+
+### FreeKey_SWR3.gadget
+
+Dieses Gadget kombiniert die Gadgets für SWR3 und free-key.
+
+Bedienung :
+- Klicken auf das Play-Icon startet oder stoppt den Audio-Stream.
+- Rollen der Maus auf dem Gadget verändert die Laustärke.
+- Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden. Hier kann man auch die Status-Seite von free-key-de direkt aufrufen.
+- Der Button "Vergrößern" öffnet ein doppelt so großes Fenster. 
+- Anklicken von Restzeit fragt aktualisiert die Daten.
+- Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
+
+
+![Screenshot_03.jpgD](pictures/Screenshot_03.jpg)
