@@ -68,4 +68,4 @@ Bedienung :
 - Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
 
 
-![Screenshot_03.jpgD](pictures/Screenshot_03.jpg)
+![Screenshot_03.jpg](pictures/Screenshot_03.jpg)
