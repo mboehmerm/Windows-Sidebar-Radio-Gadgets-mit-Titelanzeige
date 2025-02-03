@@ -41,7 +41,7 @@ C:\<Installationspfad>\LynxPortable\Data\LynxSettings\LY-TRACE.LOG
 
 Hier sieht man, welche Queries mit welchen Daten gesendet bzw empfangen wurden.
 
-Zum Debuggen wurde [Dbgview.exe](programs/Dbgview.exe) verwendet, mit dem man sich z.B. die Rückgabedaten eines XMLHttpRequest anschauen kann.
+Zum Debuggen wurde [Dbgview.exe](programs/Dbgview.exe) verwendet, mit dem man sich z.B. die Rückgabedaten eines XMLHttpRequests anschauen kann.
 
 ```java
 System.Debug.outputString("State : " + req.readyState + " / Status : " + req.status);
@@ -64,7 +64,7 @@ Bedienung :
 - Rollen der Maus auf dem Gadget verändert die Laustärke.
 - Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden. Hier kann man auch die Status-Seite von free-key-de direkt aufrufen.
 - Der Button "Vergrößern" öffnet ein doppelt so großes Fenster. 
-- Anklicken von Restzeit fragt aktualisiert die Daten.
+- Anklicken von Restzeit fragt aktualisiert die Daten von free-key.
 - Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
 
 Ist man offline oder nicht über free-key im Internet, dann wird statt der Restzeit ">>SWR3" angezeigt.
