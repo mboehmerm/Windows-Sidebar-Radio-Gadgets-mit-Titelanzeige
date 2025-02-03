@@ -67,5 +67,7 @@ Bedienung :
 - Anklicken von Restzeit fragt aktualisiert die Daten.
 - Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
 
+Ist man offline oder ist man nicht über free-key im Internet, wird statt der Restzeit ">>SWR3" angezeigt.
+
 
 ![Screenshot_03.jpg](pictures/Screenshot_03.jpg)
