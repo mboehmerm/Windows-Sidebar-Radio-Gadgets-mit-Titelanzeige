@@ -85,7 +85,7 @@ function swapDock(){
   System.Gadget.beginTransition();
   if (System.Gadget.docked) {       // Gadget Docked = normale Größe
     offset_Width   = 115;           // Offset in Pixel, ab dem der text gescrollt wird
-    offset_Width_R =  75;           // Offset in Pixel, ab dem Restzeit gescrollt wird
+    offset_Width_R =  80;           // Offset in Pixel, ab dem Restzeit gescrollt wird
     with (document.body.style) {
       width =130;
       height=73;
@@ -96,7 +96,7 @@ function swapDock(){
       marginTop  =   "0px";
       marginLeft =   "3px";
       fontSize   =  "18px";
-      width      =  "75px";
+      width      =  "80px";
       height     =  "20px";
     }
     with (song_title.style) {        // obere Zeile 
@@ -121,7 +121,7 @@ function swapDock(){
   }  
   else {                             // Gadget Undocked = verdoppelte Größe
     offset_Width   = 230;
-    offset_Width_R = 150;
+    offset_Width_R = 160;
     with (document.body.style) {
       width =260;
       height=146;
@@ -132,7 +132,7 @@ function swapDock(){
       marginTop  =   "0px";
       marginLeft =   "6px";
       fontSize   =  "32px";
-      width      = "150px";
+      width      = "160px";
       height     =  "40px";
     }
     with (song_title.style) {
@@ -235,8 +235,8 @@ function parseData(){
     }
     else
     {
-      animCont.innerHTML = output;
-      animCont2.innerHTML = " ";
+      animCont.innerHTML = " ";
+      animCont2.innerHTML = output;
     }
   }
 }
@@ -412,13 +412,12 @@ function playStateChange(newstate) {
 // FreeKey
 
 //==================================================================================================
+// Statusmeldungen FreeKey
 function messageFreeKey(s){
-  o = "FreeKey: " + s;
   animCont.innerHTML  = " ";
-  animCont2.innerHTML = o;
-  animCont.innerHTML  = " ";
-  //output = "|" + o;
-  delayFreeKeyMessage = 2;          // Statusmeldungen FreeKey
+  animCont2.innerHTML = "FreeKey: " + s;
+  //output = "|" + s;
+  delayFreeKeyMessage = 2;
 }
 //--------------------------------------------------------------------------------------------------
 function getRemainingStr(){

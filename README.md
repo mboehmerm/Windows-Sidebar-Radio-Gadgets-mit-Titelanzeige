@@ -64,10 +64,11 @@ Bedienung :
 - Rollen der Maus auf dem Gadget verändert die Laustärke.
 - Anklicken von Titel oder Interpret öffnet ein Bild des Album Covers, sofern vorhanden. Hier kann man auch die Status-Seite von free-key-de direkt aufrufen.
 - Der Button "Vergrößern" öffnet ein doppelt so großes Fenster. 
-- Anklicken von Restzeit fragt aktualisiert die Daten von free-key.
-- Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt.
+- Anklicken von Restzeit aktualisiert die Daten von free-key.
+- Bei Doppelklick auf Restzeit wird man ausgeloggt und gleich wieder eingeloggt. Klappt leider nicht immer beim ersten Mal.
 
 Ist man offline oder nicht über free-key im Internet, dann wird statt der Restzeit ">>SWR3" angezeigt.
 
+Bitte daran denken: Die Gadgets funktionieren, sind aber alles andere als perfekt. 
 
 ![Screenshot_03.jpg](pictures/Screenshot_03.jpg)
